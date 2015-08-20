@@ -12,3 +12,7 @@ allowBlockBreak = function(id, meta, facing)
         return true, "Will not damage hive"
     end
 end
+
+allowEntityKill = function()
+    return true
+end
