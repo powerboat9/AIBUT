@@ -9,6 +9,10 @@ function getFacingCoords(direction, x, y, z)
             return x, y + 1, z
         elseif directionLow == "down" then
             return x, y - 1, z
+        elseif directionLow == "south" then
+            return x, y, z + 1
+        elseif directionLow == "north" then
+            return x, y, z - 1
         else
             error("Invalid Direction: " .. direction, 2)
         end
