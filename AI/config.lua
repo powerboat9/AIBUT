@@ -6,9 +6,9 @@ allowBlockBreak = function(id, meta, facing)
         return false, "GPS unavailable"
     end
     
-    if hive[1] != x or hive[2] != y or hive[3] != z then
-        return true, "Will not damage hive"
-    else
+    if hive[1] == x and hive[2] == y and hive[3] == z then
         return false, "Will damage hive"
+    else
+        return true, "Will not damage hive"
     end
 end
