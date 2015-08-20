@@ -1,5 +1,7 @@
 hive = {126, 76, -156}
 
+isWild = 2
+
 allowBlockBreak = function(id, meta, facing)
     x, y, z = gps.locate(5)
     if not x then
