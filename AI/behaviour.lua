@@ -8,3 +8,7 @@ allowEntityKill = config.allowEntityKill
 drives = config.drives
 
 os.unloadAPI("AI/config")
+
+behaviour = {
+    --TODO: Work
+}
