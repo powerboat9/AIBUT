@@ -1,7 +1,19 @@
 function getFacingCoords(direction, x, y, z)
     if type(direction) == "number" then
         if direction == 1 then
-            direction = "south
+            direction = "north"
+        elseif direction == 2 then
+            direction = "east"
+        elseif direction == 3 then
+            direction = "south"
+        elseif direction == 4 then
+            direction = "west"
+        elseif direction == 5 then
+            direction = "up"
+        elseif direction == 6 then
+            direction = "down"
+        end
+    end
     if type(direction) == "string" then
         directionLow = string.lower(direction)
         if directionLow == "east" then
