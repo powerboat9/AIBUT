@@ -1,3 +1,14 @@
+function getSides()
+    return {
+        "north",
+        "east",
+        "south",
+        "west",
+        "up",
+        "down"
+    }
+end
+
 function getFacingCoords(direction, x, y, z)
     if type(direction) == "number" then
         if direction == 1 then
