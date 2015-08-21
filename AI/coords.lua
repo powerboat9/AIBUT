@@ -14,7 +14,7 @@ function getFacingCoords(direction, x, y, z)
     
     if type(direction) == "number" then
         directionLow = getSides()[direction]
-        if not direction then
+        if not directionLow then
             error("Invalid Direction ID", 2)
         end
     elseif type(direction) == "string" then
