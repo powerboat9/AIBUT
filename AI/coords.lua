@@ -1,4 +1,7 @@
 function getFacingCoords(direction, x, y, z)
+    if type(direction) == "number" then
+        if direction == 1 then
+            direction = "south
     if type(direction) == "string" then
         directionLow = string.lower(direction)
         if directionLow == "east" then
@@ -16,3 +19,7 @@ function getFacingCoords(direction, x, y, z)
         else
             error("Invalid Direction: " .. direction, 2)
         end
+    else
+        error("Invalid Type: " .. type(direction), 2)
+    end
+end
