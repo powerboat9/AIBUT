@@ -26,7 +26,7 @@ function getFacingCoords(direction, x, y, z)
         end
     end
     if type(direction) == "string" then
-        directionLow = string.lower(direction)
+        local directionLow = string.lower(direction)
         if directionLow == "east" then
             return x + 1, y, z
         elseif directionLow == "west" then
