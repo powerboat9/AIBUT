@@ -1,18 +1,17 @@
+function getSides()
+    return {
+        "north",
+        "east",
+        "south",
+        "west",
+        "up",
+        "down"
+    }
+end
+
 function getFacingCoords(direction, x, y, z)
     if type(direction) == "number" then
-        if direction == 1 then
-            direction = "north"
-        elseif direction == 2 then
-            direction = "east"
-        elseif direction == 3 then
-            direction = "south"
-        elseif direction == 4 then
-            direction = "west"
-        elseif direction == 5 then
-            direction = "up"
-        elseif direction == 6 then
-            direction = "down"
-        end
+        direction = getSides()[direction]
     end
     if type(direction) == "string" then
         local directionLow = string.lower(direction)
@@ -34,15 +33,4 @@ function getFacingCoords(direction, x, y, z)
     else
         error("Invalid Type: " .. type(direction), 2)
     end
-end
-
-function getSides()
-    return {
-        "north",
-        "east",
-        "south",
-        "west",
-        "up",
-        "down"
-    }
 end
