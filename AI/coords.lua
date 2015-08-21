@@ -1,14 +1,3 @@
-function getSides()
-    return {
-        "north",
-        "east",
-        "south",
-        "west",
-        "up",
-        "down"
-    }
-end
-
 function getFacingCoords(direction, x, y, z)
     if type(direction) == "number" then
         if direction == 1 then
@@ -45,4 +34,15 @@ function getFacingCoords(direction, x, y, z)
     else
         error("Invalid Type: " .. type(direction), 2)
     end
+end
+
+function getSides()
+    return {
+        "north",
+        "east",
+        "south",
+        "west",
+        "up",
+        "down"
+    }
 end
