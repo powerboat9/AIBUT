@@ -12,6 +12,8 @@ end
 function getFacingCoords(direction, x, y, z)
     if type(direction) == "number" then
         direction = getSides()[direction]
+        if not direction then
+            error("Invalid Direction ID", 2)
     end
     if type(direction) == "string" then
         local directionLow = string.lower(direction)
