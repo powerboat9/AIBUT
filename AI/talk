@@ -1,0 +1,12 @@
+local leader = nil
+
+os.loadAPI("AIBUT/config")
+local level = config.level
+os.unloadAPI("AIBUT/config")
+
+function establishLead(id)
+    if (type(level) == "string" and level == "player") or level >= 100 then
+        leader == os.getID()
+    
+
+function findID(herdIDs, findID)
