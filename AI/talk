@@ -2,11 +2,15 @@ local leader = nil
 
 os.loadAPI("AIBUT/config")
 local level = config.level
+local mode = config.type
 os.unloadAPI("AIBUT/config")
 
 function establishLead(id)
-    if (type(level) == "string" and level == "player") or level >= 100 then
-        leader == os.getID()
-    
+    if level == nil then
+        if mode == "player" then
+            level = math.hugeNumber
+        elseif mode == "virus" then
+            level = "execute:obey " .. os.getID()
+        elseif mode == "
 
 function findID(herdIDs, findID)
