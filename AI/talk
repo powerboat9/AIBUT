@@ -7,8 +7,8 @@ os.unloadAPI("AIBUT/config")
 function establishLead(id)
     rednet.broadcast("getLeader " .. os.getComputerID())
     local id, msg = rednet.receive("herd", 10)
-    _, _, leader, level = string.find(msg, "giveLeader (%d+) level (%d+)")
-    if (not (leader and level)) or string.length(msg) ~= (18 + string.length(tostring(leader) .. tostring(level)) then
+    _, _, leader, level = string.find(msg, "^giveLeader (%d+) level (%d+)$")
+    if not (leader and level) then
         return establishLead(id)
     end
 end
