@@ -6,6 +6,8 @@ local mode = config.type
 os.unloadAPI("AIBUT/config")
 
 function establishLead(id)
-    rednet.receive()
+    rednet.broadcast("getLeader " .. os.getID())
+    local id, msg = rednet.receive("heard", 10)
+    leader, level = string
 
 function findID(herdIDs, findID)
