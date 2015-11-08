@@ -1,19 +1,11 @@
 local leader = nil
 
-local chem = {
-    
-
 os.loadAPI("AIBUT/config")
 local level = config.level
 local mode = config.type
 os.unloadAPI("AIBUT/config")
 
 function establishLead(id)
-    if level == nil then
-        if mode == "player" then
-            level = math.huge
-        elseif mode == "virus" then
-            level = "execute:obey " .. os.getID()
-        elseif mode == "
+    rednet.receive()
 
 function findID(herdIDs, findID)
