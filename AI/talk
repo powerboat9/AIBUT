@@ -8,6 +8,6 @@ os.unloadAPI("AIBUT/config")
 function establishLead(id)
     rednet.broadcast("getLeader " .. os.getComputerID())
     local id, msg = rednet.receive("herd", 10)
-    leader, level = string
+    leader, level = string.find(msg, "giveLeader (%n) level (%n)
 
 function findID(herdIDs, findID)
