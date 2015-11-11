@@ -1,8 +1,27 @@
 local leader = nil
+local level = nil
 
 os.loadAPI("AIBUT/config")
 local mode = config.type
 os.unloadAPI("AIBUT/config")
+
+local stack = {
+    admin_control = {
+        action = function(params)
+            local code = nil
+            local i = 0
+            for v in ipairs(params) do
+                i++
+                if i ~= 1 then
+                    code = code .. " "
+                end
+                code = code .. v
+            end
+        end,
+        level = 4,--4 = admin, 3 = trade, 2 = leader, 1 = self
+        expires = -1--Time in ticks world has been loaded
+    }
+}
 
 function locateByGPS()
 
