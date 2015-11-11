@@ -2,6 +2,8 @@ local pendingActions = {}
 local subroutines = {}
 local goals = {}
 
+function runSubroutine()
+
 function runTurtleApi()
     local action = pendingActions[1]
     if action.type == "death" then
