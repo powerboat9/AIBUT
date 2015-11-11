@@ -1,4 +1,6 @@
 local pendingActions = {}
+local subroutines = {}
+local goals = {}
 
 function runTurtleApi()
     local action = pendingActions[1]
@@ -19,6 +21,12 @@ function runTurtleApi()
     elseif action.type == "install subroutine" then
         if type(action.data) == "table" then
             table.insert(subroutines, action.data)
+        else
+            fail()
+        end
+    elseif action.type == "add goal" then
+        if type(action.data) == "table" then
+            table.insert(goals, action.data)
         else
             fail()
         end
