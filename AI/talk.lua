@@ -19,7 +19,7 @@ local stack = {
             end
         end,
         level = 4,--4 = admin, 3 = trade, 2 = leader, 1 = self
-        expires = -1--Time in ticks world has been loaded
+        expires = -1--How long the world has been running in seconds.
     }
 }
 
