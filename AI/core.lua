@@ -5,9 +5,12 @@ local goals = {}
 tAtCrash = -1
 
 function fail(...)
-    if (arg[1] == nil) or arg[1] then
+    if (arg[1] == nil) or not arg[1] then
         local oldTAtCrash = tAtCrash
-        
+        tAtCrash = getServerTimeTicks()
+        punish = 1+((tAtCrash - oldTAtCrash)/20)
+    then
+end
 
 function runSubroutine()
 
