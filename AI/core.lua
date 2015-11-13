@@ -2,6 +2,13 @@ local pendingActions = {}
 local subroutines = {}
 local goals = {}
 
+tAtCrash = -1
+
+function fail(...)
+    if (arg[1] == nil) or arg[1] then
+        local oldTAtCrash = tAtCrash
+        
+
 function runSubroutine()
 
 function runTurtleApi()
