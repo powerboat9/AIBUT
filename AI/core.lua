@@ -4,6 +4,10 @@ local goals = {}
 
 tAtCrash = -1
 
+function getServerTimeTicks()
+    return os.day() * 24000 + ((os.time() * 1000 + 18000) % 24000)
+end
+
 function fail(...)
     if (arg[1] == nil) or not arg[1] then
         local oldTAtCrash = tAtCrash
