@@ -1,6 +1,8 @@
 function moveAllOfType(slot)
     for i = 1, 16 do
-        
+        for j = 1, 16 do
+            local amountLeft = turtle.getItemSpace(i)
+            local amount
 
 function compress()
     for i = 1, 16 do
