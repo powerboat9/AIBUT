@@ -1,17 +1,27 @@
-function moveAllOfType(slot)
+function moveAllOfType(slot, name)
     for i = 1, 16 do
-        for j = 1, 16 do
-            local amountLeft = turtle.getItemSpace(i)
-            local amount
+        turtle.select(i)
+        if (turtle.getItemDetail().name == name) and (slot ~= i) then
+            turtle.transferTo(slot)
+        end
+    end
+end
 
 function compress()
-    for i = 1, 16 do
-        
+    
 
 function clearForCache()
-    for i = 16, 1, -1 do
-        turtle.select(i)
-        local amountToMove
+    if turtle.getItemCount(16) ~= 0 then
+        for i = 1, 15 do
+            if turtle.getItemCount(i) == 0 then
+                turtle.select(16)
+                turtle.transferTo(i)
+            end
+        end
+    else
+        for i = 16, 1, -1 do
+            turtle.select(i)
+            local amountToMove
 
 function sort(format)
     local slotContains = {}
