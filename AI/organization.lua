@@ -36,9 +36,15 @@ function clearForCache()
     end
     return false
 end
+
+function
+
 function sort(format)
     local slotContains = {}
     local slotExamine = 1
-    local cacheSlot = clearForCache()
+    if not clearForCache() then
+        printError("Can't clear an inventory slot")
+        return false
+    end
     for v in string.gmatch(format, "(.-);") do
         
